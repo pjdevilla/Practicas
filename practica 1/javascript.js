@@ -9,6 +9,22 @@ Array.prototype.buscar = function(nombre)
 	return mensaje;
 }
 
+Array.prototype.eliminar = function(nombre)
+{    
+	
+	var arreglo = this.filter(function(elemento){
+		return elemento != nombre;
+	});
+	
+	for(var i = 0; i<arreglo.length; i++){
+		this[i] = arreglo[i];
+		console.log(arreglo.length);
+	}
+	return this.pop();
+}
+
 var nombres = ['mabel', 'anita', 'eloy'];
 console.log(nombres);
 console.log(nombres.buscar('anita'));
+nombres.eliminar('eloy');
+console.log(nombres);
