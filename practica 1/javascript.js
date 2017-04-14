@@ -23,8 +23,23 @@ Array.prototype.eliminar = function(nombre)
 	return this.pop();
 }
 
-var nombres = ['mabel', 'anita', 'eloy'];
+Array.prototype.unico=function(nombre)
+{
+  return function()
+  {
+  	return this.filter(a)
+  }
+} (function(a,b,c){return c.indexOf(a,b+1)<0});
+
+
+var nombres = ['mabel', 'anita', 'eloy','eloy','anita','carlos','carlos','juan'];
 console.log(nombres);
 console.log(nombres.buscar('anita'));
+
 nombres.eliminar('eloy');
 console.log(nombres);
+
+console.log(nombres.unico());
+
+
+
